@@ -1,0 +1,67 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Calling Pyjokes ",
+      "description": "This is a Swagger Connecting WA to Cloud Function",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://myjokegithub.15ndybid0kcc.au-syd.codeengine.appdomain.cloud",
+        "description": "Sydney, AU"
+      }
+    ],
+    "paths": {
+      "/": {
+        "post": {
+          "parameters": [],
+          "summary": "No parameters ",
+          "description": "returns a joke.",
+          "requestBody": {
+            "description": "Payload to return joke",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "name of person"
+                    }
+                  }
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/hw-response"
+                  }
+                }
+              }
+            },
+            "405": {
+              "description": "Invalid input."
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "hw-response": {
+          "type": "object",
+          "properties": {
+            "joke": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }

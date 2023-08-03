@@ -1,9 +1,9 @@
 import pyjokes
 
 def main(params):
-  jokes=pyjokes.get_joke()
+  joke=pyjokes.get_joke()
 
   return {
    
-        "body": jokes
+        joke: joke
   }
