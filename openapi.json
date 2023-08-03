@@ -57,7 +57,7 @@
         "hw-response": {
           "type": "object",
           "properties": {
-            "joke": {
+            "body": {
               "type": "string"
             }
           }
