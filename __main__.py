@@ -3,9 +3,10 @@ import json
 
 def main(params):
   joke=pyjokes.get_joke()
-  mydic = { "body": joke}
-  x= json.dumps(mydic)
-  return x
+  
+  return {
+    "body":joke
+  }
 
 #x = main("")
 #print(x)
