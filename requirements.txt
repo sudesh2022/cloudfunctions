@@ -1,1 +1,1 @@
-pyjokes=0.6.0 
+pyjokes==0.6.0 
